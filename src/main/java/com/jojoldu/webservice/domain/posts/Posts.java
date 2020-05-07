@@ -1,5 +1,6 @@
 package com.jojoldu.webservice.domain.posts;
 
+import com.jojoldu.webservice.domain.BaseTimeEntity;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
@@ -13,7 +14,7 @@ import javax.persistence.Id;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)  // 기본 생성자 자동 추가. 기본 생성자의 접근 권한을 protected로 제한한다. protected Posts() {}와 같은 효과다.
 @Getter // 클래스 내 모든 필드의 getter 메소드를 자동 생성
 @Entity // 실제 DB 테이블과 매칭될 클래스. 언더스코어로 이름을 매칭한다.
-public class Posts {
+public class Posts extends BaseTimeEntity {
 
     /* 웬만하면 Entity의 PK는 Long 타입의 Auto_increment를 추천합니다.
     (MySQL 기준으로 이렇게 하면 bigint 타입이 됩니다.)
