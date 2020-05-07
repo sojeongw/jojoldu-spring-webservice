@@ -1,0 +1,5 @@
+POST http://localhost:8080/posts
+Content-TYpe: application/json
+
+# 바디가 너무 길다면 파일로 따로 빼서 꺽쇠 이후로 파일 경로를 써준다.
+< ./post.json

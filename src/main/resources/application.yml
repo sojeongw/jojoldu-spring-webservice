@@ -1,0 +1,6 @@
+# application.properties를 사용하셔도 무방합니다만, 굳이 yml로 변경한 이유는 properties에 비해 상대적으로 유연한 구조를 가졌기 때문입니다.
+# yml은 상위 계층에 대한 표현, List 등을 완전하게 표현할 수 있습니다.
+spring:
+  h2:
+    console:
+      enabled: true

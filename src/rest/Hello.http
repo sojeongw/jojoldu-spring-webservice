@@ -1,0 +1,3 @@
+# 파일의 첫줄에는 HTTP Method와 URL을,
+# 둘째줄부터는 RequestHeader 부분을 작성해주시면 됩니다.
+GET http://localhost:8080/hello
