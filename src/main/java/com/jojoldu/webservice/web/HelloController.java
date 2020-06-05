@@ -18,8 +18,8 @@ public class HelloController {
     @GetMapping("/hello/dto")
     public HelloResponseDto helloDto(@RequestParam("name") String name, @RequestParam("amount") int amount) {
         /* @RequestParam
-        * 외부에서 API로 넘긴 파라미터를 가져오는 애너테이션이다.
-        * name이란 이름으로 넘긴 파라미터를 메서드 파라미터인 String name에 저장한다. */
+         * 외부에서 API로 넘긴 파라미터를 가져오는 애너테이션이다.
+         * name이란 이름으로 넘긴 파라미터를 메서드 파라미터인 String name에 저장한다. */
         return new HelloResponseDto(name, amount);
     }
 }
