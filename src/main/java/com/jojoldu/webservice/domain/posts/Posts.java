@@ -8,7 +8,7 @@ import javax.persistence.*;
 
 @Getter
 @NoArgsConstructor
-@Entity // 주요 애너테이션을 클래스와 가깝게 해주면, 추후 delombok 할 때 편하다.
+@Entity
 public class Posts {
 
     @Id
@@ -28,5 +28,10 @@ public class Posts {
         this.title = title;
         this.content = content;
         this.author = author;
+    }
+
+    public void update(String title, String content) {
+        this.title = title;
+        this.content = content;
     }
 }

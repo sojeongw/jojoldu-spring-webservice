@@ -45,7 +45,5 @@ public class HelloControllerTest {
                 // $를 기준으로 필드명을 명시한다. 즉, $.name으로 name을 검증한다.
                 .andExpect(jsonPath("$.name", is(name)))
                 .andExpect(jsonPath("$.amount", is(amount)));
-
-
     }
 }
