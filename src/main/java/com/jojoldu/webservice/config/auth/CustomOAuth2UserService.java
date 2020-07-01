@@ -1,6 +1,7 @@
 package com.jojoldu.webservice.config.auth;
 
 import com.jojoldu.webservice.config.auth.dto.OAuthAttributes;
+import com.jojoldu.webservice.config.auth.dto.SessionUser;
 import com.jojoldu.webservice.domain.user.User;
 import com.jojoldu.webservice.domain.user.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -41,7 +42,6 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
                 attributes.getAttributes(),
                 attributes.getNameAttributeKey());
     }
-
 
     private User saveOrUpdate(OAuthAttributes attributes) {
         User user = userRepository.findByEmail(attributes.getEmail())
