@@ -5,7 +5,6 @@ import com.jojoldu.webservice.web.dto.PostsResponseDto;
 import com.jojoldu.webservice.web.dto.PostsSaveRequestDto;
 import com.jojoldu.webservice.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor
@@ -22,19 +21,6 @@ public class PostsApiController {
     @PutMapping("/api/v1/posts/{id}")
     public Long update(@PathVariable Long id, @RequestBody PostsUpdateRequestDto requestDto) {
         return postsService.update(id, requestDto);
-    }
-
-    @GetMapping("/posts/update/{id}")
-    public String postsUpdate(@PathVariable Long id, Model model) {
-        PostsResponseDto dto = postsService.findById(id);
-        model.addAttribute("post", dto);
-
-        return "posts-update";
-    }
-
-    @GetMapping("/posts/save")
-    public String postsSave() {
-        return "posts-save";
     }
 
     @GetMapping("/api/v1/posts/{id}")
